@@ -21,7 +21,6 @@ class Decoder:
      
     def updateState(self, final = False):
         if self.stateLen >= self.MIN_STATE_LEN:
-            if self.pos > 4062027 and self.pos < 4102027: print(self.pos, self.prevState, self.stateLen)
             if self.prevState == "ZEROS":
               self.onOffState = "OFF"
                                           
@@ -43,10 +42,10 @@ class Decoder:
                 elif self.onOffLen > 4000:
                   self.msg = ""
                   self.msgStart = self.pos                  
-                  print("SYNC", self.onOffLen, self.avgSum / self.onOffLen, self.avgMax, self.pos)
+                  #print("SYNC", self.onOffLen, self.avgSum / self.onOffLen, self.avgMax, self.pos)
                 else:
                   print("UNKNOWN", self.onOffLen, self.avgSum / self.onOffLen, self.avgMax, self.pos)
-              elif self.onOffLen > 5000:
+              elif self.onOffLen > 5000 and self.msgStart > 0:
                  print("{}(+{})\t{}".format(self.msgStart, self.pos - self.msgStart, self.msg))
                  self.msg = ""
                  self.msgStart = -1
@@ -72,8 +71,6 @@ class Decoder:
         #intVal = int.from_bytes([val], "big", signed = True)        
         if abs(val) < 50:
             val = 0        
-        
-        if self.pos > 4062027 and self.pos < 4102027: print(self.pos, val)
         
         self.avgSum += abs(val)
         self.avgMax = abs(val) if abs(val) > self.avgMax else self.avgMax

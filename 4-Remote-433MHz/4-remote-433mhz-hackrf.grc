@@ -27,7 +27,7 @@ options:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [8, 8]
+    coordinate: [69, 10]
     rotation: 0
     state: enabled
 
@@ -41,7 +41,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [481, 17]
+    coordinate: [503, 10]
     rotation: 0
     state: enabled
 - name: freq
@@ -53,7 +53,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [289, 9]
+    coordinate: [324, 10]
     rotation: 0
     state: enabled
 - name: gain
@@ -65,7 +65,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [393, 11]
+    coordinate: [430, 11]
     rotation: 0
     state: enabled
 - name: samp_rate
@@ -77,7 +77,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [184, 12]
+    coordinate: [237, 10]
     rotation: 0
     state: enabled
 - name: blocks_complex_to_float_0
@@ -93,7 +93,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [970, 363]
+    coordinate: [426, 205]
     rotation: 0
     state: true
 - name: blocks_wavfile_sink_0
@@ -110,7 +110,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1224, 358]
+    coordinate: [650, 201]
     rotation: 0
     state: enabled
 - name: osmosdr_source_0
@@ -467,7 +467,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [328, 275]
+    coordinate: [64, 116]
     rotation: 0
     state: true
 - name: qtgui_freq_sink_x_0
@@ -547,7 +547,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [711, 441]
+    coordinate: [400, 282]
     rotation: 0
     state: true
 - name: qtgui_waterfall_sink_x_0
@@ -608,7 +608,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [724, 268]
+    coordinate: [395, 98]
     rotation: 0
     state: true
 
