@@ -49,6 +49,11 @@ class gr_ble_b205mini(gr.top_block):
         self.freq = freq = ble_base_freq+(ble_channel_spacing * ble_channel)
 
         ##################################################
+        # Message Queues
+        ##################################################
+        self.message_queue = message_queue = gr.msg_queue(2)
+
+        ##################################################
         # Blocks
         ##################################################
         self.unpacked_to_packed = blocks.unpacked_to_packed_bb(1, gr.GR_LSB_FIRST)
